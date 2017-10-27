@@ -7,7 +7,7 @@
 
 import getTokenUrl from '@ckeditor/ckeditor5-easy-image/tests/_utils/gettokenurl';
 
-const tokenUrl = getTokenUrl()
+const tokenUrl = getTokenUrl();
 
 ClassicEditor
 	.create( document.querySelector( '#snippet-image-caption' ), {
