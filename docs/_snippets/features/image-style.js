@@ -5,16 +5,14 @@
 
 /* globals ClassicEditor, console, window, document */
 
-import getTokenUrl from '@ckeditor/ckeditor5-easy-image/tests/_utils/gettokenurl';
-
-const tokenUrl = getTokenUrl();
+import { TOKEN_URL } from '@ckeditor/ckeditor5-cloudservices/tests/_utils/csconfig';
 
 ClassicEditor
 	.create( document.querySelector( '#snippet-image-style' ), {
 		toolbar: {
 			viewportTopOffset: 60
 		},
-		cloudServices: { tokenUrl }
+		cloudServices: { tokenUrl: TOKEN_URL }
 	} )
 	.then( editor => {
 		window.editorStyle = editor;
